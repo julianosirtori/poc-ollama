@@ -1,0 +1,18 @@
+meta {
+  name: Embed Context
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://poc-ollama-server.flycast/api/embeddings
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "model": "mxbai-embed-large",
+    "prompt": "Llamas are members of the camelid family"
+  }
+}
