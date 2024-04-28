@@ -14,11 +14,11 @@ async function main() {
   console.log('🖇️ Step: 1 Generate embeddings')
 
   const client = new ChromaClient({
-    path: "http://localhost:8000"
+    path: "http://localhost:8001"
   });
   const ollama = new Ollama({ host: 'http://poc-ollama-server.flycast' })
 
-  const collection = await client.getCollection({name: "nomic-test"})
+  const collection = await client.createCollection({name: "nomic-test"})
 
   // store each document in a vector embedding database
   for (let index = 0; index < documents.length; index++) {

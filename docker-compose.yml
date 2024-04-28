@@ -1,0 +1,16 @@
+# docker-compose.yml
+
+version: "3.9"
+services:
+  chroma:
+    container_name: chromadb 
+    image: chromadb/chroma
+    ports:
+      - "8001:8000"
+  ollama:
+    container_name: ollama 
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - /root/.ollama

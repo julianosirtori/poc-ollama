@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for poc-ollama-server on 2024-04-28T00:32:42-03:00
+# fly.toml app configuration file generated for poc-ollama-server on 2024-04-28T15:30:05-03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = 'poc-ollama-server'
-primary_region = 'ord'
+primary_region = 'gru'
 
 [build]
   image = 'ollama/ollama'
@@ -22,4 +22,4 @@ primary_region = 'ord'
   processes = ['app']
 
 [[vm]]
-  size = 'a100-40gb'
+  size = 'performance-4x'
